@@ -15,16 +15,20 @@ public static void main(String[] args) {
 		for(int i = 0; i < array.length; i++) {
 		//4. make each robot start at the bottom of the screen, side by side, facing up
 			array[i] = new Robot();
-			array[i].setY(500);
-			array[i].setX((i*100)+100);
+			array[i].setX(500);
+			array[i].setY((i*100)+100);
 			array[i].setSpeed(10);
+			array[i].setAngle(90);
 		}
 	//5. use another for loop to iterate through the array and make each robot move 
 	//   a random amount less than 50.
 	while(reach == false) {
 		for(int i = 0; i < array.length; i++) {
-			array[i].move(ran.nextInt(50));
-			array[i].turn(5);
+			for(int x = 0; x <ran.nextInt(50);x++ ) {
+				array[i].move(1+i*100);
+				array[i].turn(1);
+			}
+			
 			if(array[i].getY() <= 0) {
 				reach = true;
 				System.out.print("Robot " + (i+1) + " has won.");
