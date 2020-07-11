@@ -10,7 +10,7 @@ public class _00_ArrayCheatSheet {
 		System.out.println(array[3]);
 		//3. set the third element to a different value
 		array[3] = "Hello";
-		//4. print the third element again
+		//4. print the third element again.
 		System.out.println(array[3]);
 		//5. use a for loop to print all the values in the array
 		//   BE SURE TO USE THE ARRAY'S length VARIABLE
